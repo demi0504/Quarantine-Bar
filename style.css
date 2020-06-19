@@ -1,0 +1,12 @@
+.hero-body {
+    font-family: 'MuseoModerno', cursive;
+}
+
+#top-container {
+    margin-top: 40px;
+}
+
+#middle-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
