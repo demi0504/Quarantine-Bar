@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css"/>
     <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 <!--begin nav section-->
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -69,10 +70,19 @@
       </div>
     </div>
   </nav>
-
-<body>
-    <!--begin section for random recipe btn and music genre input-->
-    <header class="level">
+<!--end nav section-->
+<!--begin hero section to intro to bar-->
+    <header class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Welcome to Quarantine Bar</h1>
+                <h2 class="subtitle">Insert some sort of explanatory text here?</h2>
+            </div>
+        </div>
+    </header>
+<!--end hero section to intro bar-->
+<!--begin section for random recipe btn and music genre input-->
+    <section class="level">
         <div class="level-item has-text-centered">
           <div>
             <p class="title">Random Drink Selection</p>
@@ -80,10 +90,10 @@
           </div>
         </div>
         <div class="level-item has-text-centered">
-          <div>
-            <p class="title">Music Genre</p>
-            <input class="input is-primary" type="text" placeholder="Music Requests?!">
-          </div>
+            <div>
+                <p class="title">Looking for a specific recipe??</p>
+                <input class="input is-primary" type="text" placeholder="Search for it here!">
+            </div>
         </div>
     </header>
     <!--end section for random recipe btn and music genre input-->
@@ -94,15 +104,28 @@
           <button class="button is-success">Dont drink alone!</button>
         </div>
       </div>
+
+<!--end section for random recipe btn and music genre input-->
+
+
     <section class="level">
         <div class="level-item has-text-centered">
             <div>
-                <p class="title">Looking for a specific recipe??</p>
-                <input class="input is-primary" type="text" placeholder="Search for it here!">
+                <p class="title">DRANKING GAMES</p>
+                <input class="input is-primary" type="text" placeholder="tbd">
             </div>
         </div>
+        <div class="level-item has-text-centered">
+            <div>
+              <p class="title">Music Genre</p>
+              <input class="input is-primary" type="text" placeholder="Music Requests?!">
+            </div>
+          </div>
     </section>
-</body>
+
 <!--link to script file-->
 <script src="script.js"></script>
+<!--jQuery link-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
 </html>
