@@ -52,6 +52,7 @@ $(document).ready(function() {
     })
 });
 
+
 function newObj(drink) {
     var ingredient = "";
     var amount = "";
@@ -84,3 +85,10 @@ function newObj(drink) {
 //                 var strMeasure4 = data.drinks[0].strMeasure4;
 //                 var strMeasure5 = data.drinks[0].strMeasure5;
 //                 var strMeasure6 = data.drinks[0].strMeasure6;
+
+var currentTime = dayjs().format("H");
+
+var currentDate = dayjs().format("dddd, MMMM D YYYY");
+$("#currentDay").text(currentDate);
+var currentTime = dayjs().format("H");
+
