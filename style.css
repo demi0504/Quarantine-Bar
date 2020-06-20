@@ -25,21 +25,52 @@ body {
 
 .title {
     font-family: 'Metal Mania', cursive;
-    font-size: 28px;
+    font-size: 32px;
+    color: black;
+}
+
+.title2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 26px;
     color: black;
 }
 
 p {
     font-family: 'Domine', serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .button {
     background-color: gold;
     margin-bottom: 10px;
+    background-color: royalblue;
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 15px 20px;
+}
+
+.button:hover {
+    background-color: black;
+    color: gold;
+    font-size: 16px;
+}
+
+.button2 {
+    margin-bottom: 10px;
+    background-color: crimson;
+    color: white;
+    box-shadow: 10px 10px grey;
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.button2:hover {
+    background-color: cyan;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 15px 20px;
 }
 
 #search-recipe {
     margin-top: 10px;
 }
-
