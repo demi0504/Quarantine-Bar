@@ -16,11 +16,16 @@ $(document).ready(function() {
                 // console.log(data);
                 var cocktailName = data.drinks[0].strDrink;
                 var cocktailMethod = data.drinks[0].strInstructions;
-                console.log(cocktailName, cocktailMethod);
+                data.drinks.forEach(obj => {
+                    Object.entries(obj).forEach(([key, value]) => {
+                        console.log(`${key} ${value}`);
+                    });
+                    console.log('-------------------');
+                });
                 //populate cocktail recipe in div
                 $(".ran-recipe-name").html("<h5>Drink Name: " + cocktailName + "</h5>");
                 $(".ran-method").html("<h5>" + cocktailMethod + "</h5>");
-            
+                
             }
         });
     });
@@ -39,14 +44,51 @@ $(document).ready(function() {
                 console.log(data);
                 var cocktailName = data.drinks[0].strDrink;
                 var cocktailMethod = data.drinks[0].strInstructions;
+                
                 $(".recipe-name").html("<h5>Drink Name: " + cocktailName + "</h5>");
                 $(".method").html("<h5>" + cocktailMethod + "</h5>");
             }
         })
     })
 });
+
+
+function newObj(drink) {
+    var ingredient = "";
+    var amount = "";
+    var drink = [];
+    //for loop that runs 15 times
+    for (var i = 0; i <= 15; i++){
+        //at strIngredient[i] if value extract corresponding strMeasure[i]
+       if (drink["strIngredient" + i] != null) {
+           console.log(drink);
+       }
+            //create new obj
+    }
+    return {
+        ingredients: [
+            { ingredient: "tequila", amount: "1.5 oz"}
+        ]
+    }
+}
+
+
+// var ingredient1 = data.drinks[0].strIngredient1;
+//                 var ingredient2 = data.drinks[0].strIngredient2;
+//                 var ingredient3 = data.drinks[0].strIngredient3;
+//                 var ingredient4 = data.drinks[0].strIngredient4;
+//                 var ingredient5 = data.drinks[0].strIngredient5;
+//                 var ingredient6 = data.drinks[0].strIngredient6;
+//                 var strMeasure1 = data.drinks[0].strMeasure1;
+//                 var strMeasure2 = data.drinks[0].strMeasure2;
+//                 var strMeasure3 = data.drinks[0].strMeasure3;
+//                 var strMeasure4 = data.drinks[0].strMeasure4;
+//                 var strMeasure5 = data.drinks[0].strMeasure5;
+//                 var strMeasure6 = data.drinks[0].strMeasure6;
+
 var currentTime = dayjs().format("H");
 
 var currentDate = dayjs().format("dddd, MMMM D YYYY");
 $("#currentDay").text(currentDate);
 var currentTime = dayjs().format("H");
+
