@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
     <link rel="stylesheet" href="style.css" />
     <!--google font link-->
-    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
+    <!--jQuery link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -90,15 +91,24 @@
 
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
-            <div>
-                <p class="title">Random Drink Selection</p>
-                <button class="button is-success" style="background-color: crimson">Random Recipe Generator</button>
-            </div>
+          <div>
+            <p class="title">Random Drink Selection</p>
+            <button class="button is-success" id="random-button">Dealer's Choice</button>
+            <div class="ran-recipe-name"></div>
+            <div class="ran-recipe-specs"></div>
+            <div class="ran-rec-ingredients"></div>
+            <div class="ran-method"></div>
+          </div>
         </div>
         <div class="column has-text-centered">
             <div>
                 <p class="title">Looking for a specific recipe??</p>
-                <input class="input is-primary" type="text" placeholder="Search for it here!">
+                <input class="input is-primary" id="drink-input" type="text" placeholder="Search for it here!">
+                <button class="button is-success" id="search-recipe">Search</button>
+                <div class="recipe-name"></div>
+                <div class="recipe-specs"></div>
+                <div class="rec-ingredients"></div>
+                <div class="method"></div>
             </div>
         </div>
     </section>
@@ -132,10 +142,10 @@
         </div>
     </section>
 
-    <!--link to script file-->
-    <script src="script.js"></script>
-    <!--jQuery link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--link to script file-->
+<script src="script.js"></script>
+
 </body>
 
 </html>
