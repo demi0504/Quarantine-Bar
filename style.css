@@ -1,5 +1,11 @@
-.hero-body {
-    font-family: 'MuseoModerno', cursive;
+body {
+    background-image: url("https://cdn3.vectorstock.com/i/1000x1000/27/97/alcohol-shelf-background-full-of-bottles-vector-3272797.jpg");
+    background-color: #000000;
+    height: 1300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
 }
 
 #top-container {
@@ -14,10 +20,12 @@
 .columns {
     background-color: rgba(236, 240, 241, 0.8);
 }
-body {
-    background-image: url("https://cdn3.vectorstock.com/i/1000x1000/27/97/alcohol-shelf-background-full-of-bottles-vector-3272797.jpg");
-    background-color: #000000;
-    height: 1300px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-   }
+
+.button {
+    margin-bottom: 10px;
+}
+
+#search-recipe {
+    margin-top: 10px;
+}
+
