@@ -41,6 +41,7 @@ p {
 }
 
 .button {
+    background-color: gold;
     margin-bottom: 10px;
     background-color: royalblue;
     color: whitesmoke;
