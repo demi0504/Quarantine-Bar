@@ -45,3 +45,8 @@ $(document).ready(function() {
         })
     })
 });
+var currentTime = dayjs().format("H");
+
+var currentDate = dayjs().format("dddd, MMMM D YYYY");
+$("#currentDay").text(currentDate);
+var currentTime = dayjs().format("H");
