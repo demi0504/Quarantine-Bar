@@ -10,15 +10,28 @@ body {
 
 #top-container {
     margin-top: 40px;
+    font-family: 'Crimson Text', serif;
 }
 
 #middle-container {
     margin-top: 60px;
     margin-bottom: 60px;
+    font-family: 'Crimson Text', serif;
 }
 
 .columns {
     background-color: rgba(236, 240, 241, 0.8);
+}
+
+.title {
+    font-family: 'Metal Mania', cursive;
+    font-size: 28px;
+    color: black;
+}
+
+p {
+    font-family: 'Domine', serif;
+    font-size: 20px;
 }
 
 .button {

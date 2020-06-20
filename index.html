@@ -6,77 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Bar</title>
     <!--bulma and css file links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
     <link rel="stylesheet" href="style.css" />
     <!--google font link-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
     <!--jQuery link-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-<!--begin nav section-->
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://m.media-amazon.com/images/I/71zT88Tgl1L._AC_SS350_.jpg" width="45" height="50">
-      </a>
-  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
+    <!--begin nav section-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://m.media-amazon.com/images/I/71zT88Tgl1L._AC_SS350_.jpg" width="45" height="50">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
           Home
         </a>
-  
-        <a class="navbar-item">
+
+                <a class="navbar-item">
           Documentation
         </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
             More
           </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
               About
             </a>
-            <a class="navbar-item">
+                        <a class="navbar-item">
               Jobs
             </a>
-            <a class="navbar-item">
+                        <a class="navbar-item">
               Contact
             </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
               Report an issue
             </a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Drink Recipes</strong>
-            </a>
-            <a class="button is-light">
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Drink Recipes</strong>
+                        </a>
+                        <a class="button is-light">
               Party Ideas
             </a>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-<!--end nav section-->
-<!--begin hero section to intro to bar-->
+    </nav>
+    <!--end nav section-->
+    <!--begin hero section to intro to bar-->
     <header class="hero is-dark has-text-centered">
         <div class="hero-body">
             <div class="container">
@@ -85,9 +86,9 @@
             </div>
         </div>
     </header>
-<!--end hero section to intro bar-->
-<!--begin section for random recipe btn and music genre input-->
-  
+    <!--end hero section to intro bar-->
+    <!--begin section for random recipe btn and music genre input-->
+
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
           <div>
@@ -113,37 +114,38 @@
     </section>
     <!--end section for random recipe btn and music genre input-->
     <section class="columns" id="middle-container">
-      <div class="column has-text-centered">
-        <div>
-          <p class="title">Zoom</p>
-          <p>Invite your friends to hang out and drink with you!</p>
-          <button class="button is-success">Dont drink alone!</button>
+        <div class="column has-text-centered">
+            <div>
+                <p class="title">Zoom</p>
+                <p>Invite your friends to hang out and drink with you!</p>
+                <button class="button is-success" style="background-color: crimson">Dont drink alone!</button>
+            </div>
         </div>
-      </div>
     </section>
 
-<!--end section for random recipe btn and music genre input-->
+    <!--end section for random recipe btn and music genre input-->
     <section class="columns">
         <div class="column has-text-centered">
             <div>
                 <p class="title">DRANKING GAMES</p>
-                <p>Draw a mustache on your index finer, Put your finger in a random position infront of the picture
-                 Then hit the button and whenever an image lands in a spot that gives a person a mustache, take a shot! 
+                <p>Draw a mustache on your index finer, Put your finger in a random position in front of the picture Then hit the button and whenever an image lands in a spot that gives a person a mustache, take a shot!
                 </p>
                 <input class="input is-primary" type="text" placeholder="tbd">
             </div>
         </div>
         <div class="column has-text-centered">
             <div>
-              <p class="title">Music Genre</p>
-              <p>Type in a Genre to vibe to with your friends! switch up some text</p>
-              <input class="input is-primary" type="text" placeholder="Music Requests?!">
+                <p class="title">Music Genre</p>
+                <p>Type in a Genre to vibe to with your friends! switch up some text</p>
+                <input class="input is-primary" type="text" placeholder="Music Requests?!">
             </div>
-          </div>
+        </div>
     </section>
+
 
 <!--link to script file-->
 <script src="script.js"></script>
 
 </body>
+
 </html>
