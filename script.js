@@ -14,17 +14,21 @@ $(document).ready(function() {
             datatype: "jsonp",
             success: function(data){
                 // console.log(data);
-                var cocktailName = data.drinks[0].strDrink;
-                var cocktailMethod = data.drinks[0].strInstructions;
-                data.drinks.forEach(obj => {
-                    Object.entries(obj).forEach(([key, value]) => {
-                        console.log(`${key} ${value}`);
-                    });
-                    console.log('-------------------');
-                });
+                var drink = data.drinks[0]
+                var cocktailName = drink.strDrink;
+                var cocktailMethod = drink.strInstructions;
+                var ingredients = getSpecs(drink);
                 //populate cocktail recipe in div
                 $(".ran-recipe-name").html("<h5>Drink Name: " + cocktailName + "</h5>");
                 $(".ran-method").html("<h5>" + cocktailMethod + "</h5>");
+
+                for (var i = 0; i < ingredients.length; i++){
+                    console.log(ingredients[i]);
+                    var currentIngredient = $("#ran-rec-ingredients").html();
+                    $("#ran-rec-ingredients").html(currentIngredient + "<h5>" + ingredients[i].ingredient + "</h5>")
+                    var currentSpec = $("#ran-rec-specs").html();
+                    $("#ran-rec-specs").html(currentSpec + "<h5>" + ingredients[i].amount + "</h5>");
+                }
                 
             }
         });
@@ -53,38 +57,24 @@ $(document).ready(function() {
 });
 
 
-function newObj(drink) {
-    var ingredient = "";
-    var amount = "";
-    var drink = [];
+function getSpecs(drink) {
+    console.log(drink);
+    var ingredients = [];
     //for loop that runs 15 times
-    for (var i = 0; i <= 15; i++){
+    for (var i = 1; i <= 15; i++){
+        var ingredient = "";
+        var amount = "";
         //at strIngredient[i] if value extract corresponding strMeasure[i]
-       if (drink["strIngredient" + i] != null) {
-           console.log(drink);
+       if (drink["strIngredient" + i] != null && drink["strMeasure" + i] != null) {
+            ingredient = drink["strIngredient" + i];
+           //get corresponding amount
+           amount = drink["strMeasure" + i];
+           ingredients.push({ingredient, amount});
+           console.log("ingredients", ingredients);
        }
-            //create new obj
     }
-    return {
-        ingredients: [
-            { ingredient: "tequila", amount: "1.5 oz"}
-        ]
-    }
+    return ingredients;
 }
-
-
-// var ingredient1 = data.drinks[0].strIngredient1;
-//                 var ingredient2 = data.drinks[0].strIngredient2;
-//                 var ingredient3 = data.drinks[0].strIngredient3;
-//                 var ingredient4 = data.drinks[0].strIngredient4;
-//                 var ingredient5 = data.drinks[0].strIngredient5;
-//                 var ingredient6 = data.drinks[0].strIngredient6;
-//                 var strMeasure1 = data.drinks[0].strMeasure1;
-//                 var strMeasure2 = data.drinks[0].strMeasure2;
-//                 var strMeasure3 = data.drinks[0].strMeasure3;
-//                 var strMeasure4 = data.drinks[0].strMeasure4;
-//                 var strMeasure5 = data.drinks[0].strMeasure5;
-//                 var strMeasure6 = data.drinks[0].strMeasure6;
 
 var currentTime = dayjs().format("H");
 
