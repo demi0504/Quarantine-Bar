@@ -46,11 +46,19 @@ $(document).ready(function() {
             datatype: "jsonp",
             success: function(data){
                 console.log(data);
-                var cocktailName = data.drinks[0].strDrink;
-                var cocktailMethod = data.drinks[0].strInstructions;
-                
+                var drink = data.drinks[0]
+                var cocktailName = drink.strDrink;
+                var cocktailMethod = drink.strInstructions;
+                var ingredients = getSpecs(drink);
                 $(".recipe-name").html("<h5>Drink Name: " + cocktailName + "</h5>");
                 $(".method").html("<h5>" + cocktailMethod + "</h5>");
+                for (var i = 0; i < ingredients.length; i++){
+                    console.log(ingredients[i]);
+                    var currentIngredient = $("#rec-ingredients").html();
+                    $("#rec-ingredients").html(currentIngredient + "<h5>" + ingredients[i].ingredient + "</h5>")
+                    var currentSpec = $("#rec-specs").html();
+                    $("#rec-specs").html(currentSpec + "<h5>" + ingredients[i].amount + "</h5>");
+                }
             }
         })
     })
