@@ -7,7 +7,7 @@
     <title>Home Bar</title>
     <!--bulma and css file links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <!--google font link-->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
     <!--jQuery link-->
@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!--Age verification link-->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-b3eab757-5100-41c4-92d9-70cdd702ec2d"></div>
+    <div class="elfsight-app-b3eab757-5100-41c4-92d9-70cdd702ec2d"></div>
 </head>
 
 <body>
@@ -36,32 +36,32 @@
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item">
-          Home
-        </a>
+                  Home
+                </a>
 
                 <a class="navbar-item">
-          Documentation
-        </a>
+                  Documentation
+                </a>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-            More
-          </a>
+                      More
+                    </a>
 
                     <div class="navbar-dropdown">
                         <a class="navbar-item">
-              About
-            </a>
+                          About
+                        </a>
                         <a class="navbar-item">
-              Jobs
-            </a>
+                          Jobs
+                        </a>
                         <a class="navbar-item">
-              Contact
-            </a>
+                          Contact
+                        </a>
                         <hr class="navbar-divider">
                         <a class="navbar-item">
-              Report an issue
-            </a>
+                          Report an issue
+                        </a>
                     </div>
                 </div>
             </div>
@@ -69,12 +69,12 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Drink Recipes</strong>
+                        <a class="button">
+                          Drink Recipes
                         </a>
-                        <a class="button is-light">
-              Party Ideas
-            </a>
+                        <a class="button">
+                          Party Ideas
+                        </a>
                     </div>
                 </div>
             </div>
@@ -86,49 +86,53 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">Welcome to Quarantine Bar</h1>
-                <h2 class="subtitle">Insert some sort of explanatory text here?</h2>
+                <h2 class="subtitle">Where You Don't Have To Drink Alone!</h2>
                 <p id="currentDay" class="lead"></p>
             </div>
         </div>
     </header>
     <!--end hero section to intro bar-->
-    <!--begin section for random recipe btn and music genre input-->
-
+    <!--begin section for random cocktail recipe and specific recipe-->
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
-          <div>
-            <p class="title">Random Drink Selection</p>
-            <button class="button is-success" id="random-button">Dealer's Choice</button>
-            <div class="ran-recipe-name"></div>
-            <div class="ran-recipe-specs"></div>
-            <div class="ran-rec-ingredients"></div>
-            <div class="ran-method"></div>
-          </div>
+            <div>
+                <p class="title2">Random Drink Selection</p>
+                <button class="button2" id="random-button">Dealer's Choice</button>
+                <div class="ran-recipe-name"></div>
+                <div class="columns sub-columns">
+                  <div class="column" id="ran-rec-ingredients"></div>
+                  <div class="column" id="ran-rec-specs"></div>
+                </div>
+                <div class="ran-method"></div>
+            </div>
         </div>
         <div class="column has-text-centered">
             <div>
-                <p class="title">Looking for a specific recipe??</p>
+                <p class="title2">Looking for a specific recipe??</p>
                 <input class="input is-primary" id="drink-input" type="text" placeholder="Search for it here!">
-                <button class="button is-success" id="search-recipe">Search</button>
+                <button class="button2" id="search-recipe">Search</button>
                 <div class="recipe-name"></div>
-                <div class="recipe-specs"></div>
-                <div class="rec-ingredients"></div>
+                <div class="columns sub-columns">
+                  <div class="column" id="rec-ingredients"></div>
+                  <div class="column" id="rec-specs"></div>
+                </div>
                 <div class="method"></div>
             </div>
         </div>
     </section>
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for random cocktail recipe and specific recipe-->
+    <!--begin section for giphy friends population-->
     <section class="columns" id="middle-container">
         <div class="column has-text-centered">
             <div>
-                <p class="title">Zoom</p>
+                <p class="title2">Zoom</p>
                 <p>Invite your friends to hang out and drink with you!</p>
-                <button class="button is-success" style="background-color: crimson">Dont drink alone!</button>
+                <button class="button2">Don't drink alone!</button>
             </div>
         </div>
     </section>
-
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for giphy friends population-->
+    <!--begin drinking games and youtube music section-->
     <section class="columns">
         <div class="column has-text-centered">
             <div>
@@ -146,10 +150,11 @@
             </div>
         </div>
     </section>
+    <!--end drinking games and youtube music section-->
 
 
-<!--link to script file-->
-<script src="script.js"></script>
+    <!--link to script file-->
+    <script src="assets/script.js"></script>
 
 
 </body>
