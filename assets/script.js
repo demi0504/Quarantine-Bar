@@ -10,10 +10,15 @@ const specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 //random cocktail api
 const randomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 $(document).ready(function() {
+    //day.js displays current day, date at the top of the page
+    var currentDate = dayjs().format("dddd, MMMM D YYYY");
+    $("#currentDay").text(currentDate);
     //event listener for random cocktail generator
     $("#random-button").click(function(e){
         event.preventDefault();
-        
+        //clear out previous ingredients and amounts
+        $("#ran-rec-ingredients").empty();
+        $("#ran-rec-specs").empty();
         //ajax call for random cocktail button
         $.ajax({
             url: randomURL,
@@ -44,6 +49,9 @@ $(document).ready(function() {
     //event listener for specific cocktail input
     $("#search-recipe").click(function(e){
         event.preventDefault();
+        //clear out ingredient and amounts from previous search
+        $("#rec-ingredients").empty();
+        $("#rec-specs").empty();
         // console.log("clicked ya")
         var cocktail = $("#drink-input").val().trim();
         //ajax call for specific recipe search
@@ -104,11 +112,7 @@ function getSpecs(drink) {
     }
     return ingredients;
 }
-var currentTime = dayjs().format("H");
 
-var currentDate = dayjs().format("dddd, MMMM D YYYY");
-$("#currentDay").text(currentDate);
-var currentTime = dayjs().format("H");
 //get videos from youtube api
 $(".search-button").click(function(e) {
     event.preventDefault();
@@ -138,6 +142,32 @@ $(".search-button").click(function(e) {
     $('.description').text(data.items[0].snippet.description)
 }
 
+//navbar-burger functionality
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
+      });
+    }
+  
+  });
 //event listener for youtube search
 
     

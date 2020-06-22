@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
     <!--jQuery link-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--day.js link-->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!--Age verification link-->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -45,18 +46,6 @@
                 </a>
             </div>
         </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button">
-                          Drink Recipes
-                        </a>
-                        <a class="button">
-                          Party Ideas
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </nav>
     <!--end nav section-->
@@ -74,8 +63,8 @@
     <!--begin section for random cocktail recipe and specific recipe-->
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
-              <p class="title2">Random Drink Selection</p>
-              <button class="button2" id="random-button">Dealer's Choice</button>
+              <p class="title headings">Random Drink Selection</p>
+              <button class="button" id="random-button">Dealer's Choice</button>
               <div class="ran-recipe-name"></div>
               <div class="columns sub-columns">
                 <div class="column" id="ran-rec-ingredients"></div>
@@ -84,9 +73,9 @@
               <div class="ran-method"></div>
         </div>
         <div class="column has-text-centered">
-              <p class="title2">Looking for a specific recipe??</p>
-              <input class="input is-primary" id="drink-input" type="text" placeholder="Search for it here!">
-              <button class="button2" id="search-recipe">Search</button>
+              <p class="title headings">Looking for a specific recipe??</p>
+              <input class="input is-medium" id="drink-input" type="text" placeholder="Search for it here!">
+              <button class="button" id="search-recipe">Search</button>
               <div class="recipe-name"></div>
               <div class="columns sub-columns">
                 <div class="column" id="rec-ingredients"></div>
@@ -99,11 +88,11 @@
     <!--begin section for giphy friends population-->
     <section class="columns" id="middle-container">
         <div class="column has-text-centered">
-              <p class="title2">Zoom</p>
+              <p class="title headings">Zoom</p>
               <p>Invite your friends to hang out and drink with you!</p>
               <img src="" alt="" id="gif-space">
               <div class="colum">
-                <button class="button2" id="friends">Don't drink alone!</button>
+                <button class="button" id="friends">Don't drink alone!</button>
               </div>
         </div>
     </section>
@@ -112,17 +101,17 @@
     <section class="columns">
         <div class="column has-text-centered">
             <div>
-                <p class="title">DRANKING GAMES</p>
+                <p class="title headings">DRANKING GAMES</p>
                 <p>Draw a mustache on your index finer, Put your finger in a random position in front of the picture Then hit the button and whenever an image lands in a spot that gives a person a mustache, take a shot!
                 </p>
-                <input class="input is-primary" type="text" placeholder="tbd">
+                <input class="input is-medium" type="text" placeholder="tbd">
             </div>
         </div>
         <div class="column has-text-centered">
             <div>
-                <p class="title">Music Genre</p>
+                <p class="title headings">Music Genre</p>
                 <p>Type in a Genre to vibe to with your friends! switch up some text</p>
-                <button class="search-button results is-primary" type="text">Bumpin Bar tunes!</button>
+                <button class="button search-button" type="text">Bumpin Bar tunes!</button>
                 <iframe src=""></iframe>
                 <h3></h3>
                 <p class="description"></p>
