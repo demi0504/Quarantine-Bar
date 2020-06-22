@@ -51,6 +51,11 @@ p {
     font-size: 16px;
 }
 
+button:focus {
+    border: none;
+    outline-style: none;
+}
+
 #search-recipe {
     margin-top: 10px;
 }
