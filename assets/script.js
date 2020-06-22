@@ -2,6 +2,8 @@ var channelName = 'ChilledCow'
 var vidWidth = 500;
 var vidHeight = 400;
 var vidResults = 10;
+var giphyKey = "QeZln7OG6yXYytcjQlLCiVx57XHRsfoM"
+var giphyURL = "https://api.giphy.com/v1/gifs/random?api_key=QeZln7OG6yXYytcjQlLCiVx57XHRsfoM&tag=britneyspears"
 
 //specific cocktail api
 const specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
@@ -67,9 +69,23 @@ $(document).ready(function() {
             }
         })
     })
+
+    //event listener for drinking with friends
+    $("#friends").click(function(e){
+        event.preventDefault();
+        console.log("clicked");
+        $.ajax({
+            url: giphyURL,
+            method: "GET"
+        }).then(function(response) {
+            var imageURL = response.data.image_original_url;
+            $("#gif-space").attr("src", imageURL);
+            $("#gif-space").attr("alt", "image of friends");
+        })
+    })
 });
 
-
+//function to retrieve drink ingredient and specifications from cocktail api and reformat them
 function getSpecs(drink) {
     console.log(drink);
     var ingredients = [];
@@ -88,6 +104,40 @@ function getSpecs(drink) {
     }
     return ingredients;
 }
+var currentTime = dayjs().format("H");
+
+var currentDate = dayjs().format("dddd, MMMM D YYYY");
+$("#currentDay").text(currentDate);
+var currentTime = dayjs().format("H");
+//get videos from youtube api
+$(".search-button").click(function(e) {
+    event.preventDefault();
+    $.ajax({
+        type: 'GET',
+        url: 'https://www.googleapis.com/youtube/v3/search',
+        data: {
+            key: 'AIzaSyBA6QxZm934iIkmS_3KtfzVjbPboIePXX4',
+            q: "cats",
+            part: 'snippet',
+            maxResults: 1,
+            type: 'video',
+            videoEmbeddable: true,
+        },
+        success: function(data){
+            embedVideo(data)
+        },
+        error: function(response){
+            console.log("Request Failed");
+        }
+      });
+  });
+  //embed said videos onto page
+  function embedVideo(data) {
+    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+    $('h3').text(data.items[0].snippet.title)
+    $('.description').text(data.items[0].snippet.description)
+}
+
 //event listener for youtube search
 
     
@@ -140,39 +190,3 @@ function getSpecs(drink) {
 //                 })
 //     });
 // });
-
-
-
-var currentTime = dayjs().format("H");
-
-var currentDate = dayjs().format("dddd, MMMM D YYYY");
-$("#currentDay").text(currentDate);
-var currentTime = dayjs().format("H");
-//get videos from youtube api
-$(".search-button").click(function(e) {
-    event.preventDefault();
-    $.ajax({
-        type: 'GET',
-        url: 'https://www.googleapis.com/youtube/v3/search',
-        data: {
-            key: 'AIzaSyBA6QxZm934iIkmS_3KtfzVjbPboIePXX4',
-            q: "cats",
-            part: 'snippet',
-            maxResults: 1,
-            type: 'video',
-            videoEmbeddable: true,
-        },
-        success: function(data){
-            embedVideo(data)
-        },
-        error: function(response){
-            console.log("Request Failed");
-        }
-      });
-  });
-  //embed said videos onto page
-  function embedVideo(data) {
-    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
-    $('h3').text(data.items[0].snippet.title)
-    $('.description').text(data.items[0].snippet.description)
-}
