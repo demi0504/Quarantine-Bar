@@ -7,7 +7,7 @@
     <title>Home Bar</title>
     <!--bulma and css file links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <!--google font link-->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
     <!--jQuery link-->
@@ -32,35 +32,59 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item" href="/index.html" class="navbar-item is-active">
-          Home
-        </a>
-
+                  Home
+                </a>
                 <a class="navbar-item" href="/contact.html" class="navbar-item">
-          Contact Us
-        </a>
+                  Contact Us
+                </a>
                 <a class="navbar-item" href="/about.html" class="navbar-item">
-            About Us
-          </a>
-
+                  About Us
+                </a>
                 <div class="navbar-item has-dropdown is-disable">
+                <a class="navbar-item">
+                  Home
+                </a>
 
+                <a class="navbar-item">
+                  Documentation
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                      More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                          About
+                        </a>
+                        <a class="navbar-item">
+                          Jobs
+                        </a>
+                        <a class="navbar-item">
+                          Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                          Report an issue
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button">
-                        <strong>Drink Recipes</strong>
-                    </a>
-                    <a class="button">
-              Party Ideas
-            </a>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button">
+                          Drink Recipes
+                        </a>
+                        <a class="button">
+                          Party Ideas
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,16 +102,17 @@
         </div>
     </header>
     <!--end hero section to intro bar-->
-    <!--begin section for random recipe btn and music genre input-->
-
+    <!--begin section for random cocktail recipe and specific recipe-->
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
             <div>
                 <p class="title2">Random Drink Selection</p>
                 <button class="button2" id="random-button">Dealer's Choice</button>
                 <div class="ran-recipe-name"></div>
-                <div class="ran-recipe-specs"></div>
-                <div class="ran-rec-ingredients"></div>
+                <div class="columns sub-columns">
+                  <div class="column" id="ran-rec-ingredients"></div>
+                  <div class="column" id="ran-rec-specs"></div>
+                </div>
                 <div class="ran-method"></div>
             </div>
         </div>
@@ -97,17 +122,16 @@
                 <input class="input is-primary" id="drink-input" type="text" placeholder="Search for it here!">
                 <button class="button2" id="search-recipe">Search</button>
                 <div class="recipe-name"></div>
-                <div class="recipe-specs"></div>
-                <div class="column">
-                    <div class="rec-ingredients"></div>
+                <div class="columns sub-columns">
+                  <div class="column" id="rec-ingredients"></div>
+                  <div class="column" id="rec-specs"></div>
                 </div>
-                <div class="column">
-                    <div class="method"></div>
-                </div>
+                <div class="method"></div>
             </div>
         </div>
     </section>
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for random cocktail recipe and specific recipe-->
+    <!--begin section for giphy friends population-->
     <section class="columns" id="middle-container">
         <div class="column has-text-centered">
             <div>
@@ -117,8 +141,8 @@
             </div>
         </div>
     </section>
-
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for giphy friends population-->
+    <!--begin drinking games and youtube music section-->
     <section class="columns">
         <div class="column has-text-centered">
             <div>
@@ -132,14 +156,15 @@
             <div>
                 <p class="title">Music Genre</p>
                 <p>Type in a Genre to vibe to with your friends! switch up some text</p>
-                <input class="input is-primary" type="text" placeholder="Music Requests?!">
+                <button class="search-button results is-primary" type="text">Bumpin Bar tunes!</button>
             </div>
         </div>
     </section>
+    <!--end drinking games and youtube music section-->
 
 
     <!--link to script file-->
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
 
 
 </body>
