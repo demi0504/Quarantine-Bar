@@ -85,7 +85,7 @@ $(document).ready(function() {
     })
 });
 
-
+//function to retrieve drink ingredient and specifications from cocktail api and reformat them
 function getSpecs(drink) {
     console.log(drink);
     var ingredients = [];
