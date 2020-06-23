@@ -1,0 +1,65 @@
+body {
+    background-image: url("https://cdn3.vectorstock.com/i/1000x1000/27/97/alcohol-shelf-background-full-of-bottles-vector-3272797.jpg");
+    background-repeat: no-repeat;
+    font-weight: 300;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hero-body {
+    font-family: 'Metal Mania', cursive;
+    font-size: 32px; 
+}
+
+.headings {
+    font-family: 'Crimson Text', serif;
+    color: black
+}
+
+#top-container {
+    margin-top: 40px; 
+}
+
+#middle-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.columns {
+    background-color: rgba(236, 240, 241, 0.8);
+}
+
+p {
+    font-family: 'Domine', serif;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #B22222;
+    color: whitesmoke;
+    font-family: 'Domine', serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+}
+
+.button:hover {
+    background-color: #8B0000;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+button:focus {
+    border: none;
+    outline-style: none;
+}
+
+#search-recipe {
+    margin-top: 10px;
+}
+
+.sub-columns {
+    background-color: transparent;
+}

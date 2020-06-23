@@ -7,11 +7,12 @@
     <title>Home Bar</title>
     <!--bulma and css file links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <!--google font link-->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Domine&family=Metal+Mania&display=swap" rel="stylesheet">
     <!--jQuery link-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--day.js link-->
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!--Age verification link-->
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -32,36 +33,17 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="/index.html" class="navbar-item is-active">
-          Home
-        </a>
-
-                <a class="navbar-item" href="/contact.html" class="navbar-item">
-          Contact Us
-        </a>
-                <a class="navbar-item" href="/about.html" class="navbar-item">
-            About Us
-          </a>
-
-                <div class="navbar-item has-dropdown is-disable">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button">
-                        <strong>Drink Recipes</strong>
-                    </a>
-                    <a class="button">
-              Party Ideas
-            </a>
-                </div>
+                <a class="navbar-item" href="index.html" class="navbar-item is-active">
+                  Home
+                </a>
+                <a class="navbar-item" href="contact.html" class="navbar-item">
+                  Contact Us
+                </a>
+                <a class="navbar-item" href="about.html" class="navbar-item">
+                  About Us
+                </a>
             </div>
         </div>
         </div>
@@ -78,69 +60,68 @@
         </div>
     </header>
     <!--end hero section to intro bar-->
-    <!--begin section for random recipe btn and music genre input-->
-
+    <!--begin section for random cocktail recipe and specific recipe-->
     <section class="columns" id="top-container">
         <div class="column has-text-centered">
-            <div>
-                <p class="title2">Random Drink Selection</p>
-                <button class="button2" id="random-button">Dealer's Choice</button>
-                <div class="ran-recipe-name"></div>
-                <div class="ran-recipe-specs"></div>
-                <div class="ran-rec-ingredients"></div>
-                <div class="ran-method"></div>
-            </div>
+              <p class="title headings">Random Drink Selection</p>
+              <button class="button" id="random-button">Dealer's Choice</button>
+              <div class="ran-recipe-name"></div>
+              <div class="columns sub-columns">
+                <div class="column" id="ran-rec-ingredients"></div>
+                <div class="column" id="ran-rec-specs"></div>
+              </div>
+              <div class="ran-method"></div>
         </div>
         <div class="column has-text-centered">
-            <div>
-                <p class="title2">Looking for a specific recipe??</p>
-                <input class="input is-primary" id="drink-input" type="text" placeholder="Search for it here!">
-                <button class="button2" id="search-recipe">Search</button>
-                <div class="recipe-name"></div>
-                <div class="recipe-specs"></div>
-                <div class="column">
-                    <div class="rec-ingredients"></div>
-                </div>
-                <div class="column">
-                    <div class="method"></div>
-                </div>
-            </div>
+              <p class="title headings">Looking For A Specific Recipe?</p>
+              <input class="input is-medium" id="drink-input" type="text" placeholder="Search for it here!">
+              <button class="button" id="search-recipe">Search</button>
+              <div class="recipe-name"></div>
+              <div class="columns sub-columns">
+                <div class="column" id="rec-ingredients"></div>
+                <div class="column" id="rec-specs"></div>
+              </div>
+              <div class="method"></div>
         </div>
     </section>
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for random cocktail recipe and specific recipe-->
+    <!--begin section for giphy friends population-->
     <section class="columns" id="middle-container">
         <div class="column has-text-centered">
-            <div>
-                <p class="title2">Zoom</p>
-                <p>Invite your friends to hang out and drink with you!</p>
-                <button class="button2">Don't drink alone!</button>
-            </div>
+              <p class="title headings">Need A Drinking Buddy?</p>
+              <p>Invite your friends to hang out and drink with you!</p>
+              <img src="" alt="" id="gif-space">
+              <div class="colum">
+                <button class="button" id="friends">Don't drink alone!</button>
+              </div>
         </div>
     </section>
-
-    <!--end section for random recipe btn and music genre input-->
+    <!--end section for giphy friends population-->
+    <!--begin drinking games and youtube music section-->
     <section class="columns">
         <div class="column has-text-centered">
             <div>
-                <p class="title">DRANKING GAMES</p>
+                <p class="title headings">DRANKING GAMES</p>
                 <p>Draw a mustache on your index finer, Put your finger in a random position in front of the picture Then hit the button and whenever an image lands in a spot that gives a person a mustache, take a shot!
                 </p>
-                <input class="input is-primary" type="text" placeholder="tbd">
+                <input class="input is-medium" type="text" placeholder="tbd">
             </div>
         </div>
         <div class="column has-text-centered">
             <div>
-                <p class="title">Music Genre</p>
+                <p class="title headings">Music Genre</p>
                 <p>Type in a Genre to vibe to with your friends! switch up some text</p>
-                <input class="input is-primary" type="text" placeholder="Music Requests?!">
+                <button class="button search-button" type="text">Bumpin Bar tunes!</button>
+                <iframe src=""></iframe>
+                <h3></h3>
+                <p class="description"></p>
             </div>
         </div>
     </section>
-
-
+    <!--end drinking games and youtube music section-->
     <!--link to script file-->
-    <script src="script.js"></script>
-    (function)
+
+<script src="assets/script.js"></script>
 
 </body>
 
