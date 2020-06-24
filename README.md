@@ -16,3 +16,9 @@ For this project we've created a virtual bar that allows the user to either rand
 *AS AN individual stuck in quarantine,  
 I WANT to be able to meet up with my friends and look for drinks we can all make from the comfort of our homes,  
 SO that we can keep our distance but still have the fun of a bar at home!
+
+### Age Verification Page
+![image](https://user-images.githubusercontent.com/59584773/85605588-eb83ae00-b617-11ea-8a4e-93435ad37e1a.png)
+
+### Home Page
+![image](https://user-images.githubusercontent.com/59584773/85605845-2ede1c80-b618-11ea-957f-aa18d281558c.png)
