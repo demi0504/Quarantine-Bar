@@ -4,6 +4,7 @@ var vidHeight = 400;
 var vidResults = 10;
 var giphyKey = "QeZln7OG6yXYytcjQlLCiVx57XHRsfoM"
 var giphyURL = "https://api.giphy.com/v1/gifs/random?api_key=QeZln7OG6yXYytcjQlLCiVx57XHRsfoM&tag=britneyspears"
+var giphyBURL = "https://api.giphy.com/v1/gifs/random?api_key=QeZln7OG6yXYytcjQlLCiVx57XHRsfoM&tag=kanyewest"
 
 //specific cocktail api
 const specificURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
@@ -120,7 +121,7 @@ $(".search-button").click(function(e) {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'AIzaSyBA6QxZm934iIkmS_3KtfzVjbPboIePXX4',
+            key: 'AIzaSyCOGxX4G87Z0Q_-AMESmAcNFxzfZPo9f3E',
             q: "cats",
             part: 'snippet',
             maxResults: 1,
@@ -220,3 +221,16 @@ document.addEventListener('DOMContentLoaded', () => {
 //                 })
 //     });
 // });
+
+$("#games").click(function(e){
+    event.preventDefault();
+    console.log("clicked");
+    $.ajax({
+        url: giphyBURL,
+        method: "GET"
+    }).then(function(response) {
+        var imageURL = response.data.image_original_url;
+        $("#gif-space2").attr("src", imageURL);
+        $("#gif-space2").attr("alt", "image of ye");
+    })
+})
