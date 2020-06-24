@@ -18,17 +18,9 @@ body {
     color: black
 }
 
-#top-container {
-    margin-top: 40px;
-}
-
-#middle-container {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
 .columns {
     background-color: rgba(236, 240, 241, 0.8);
+    margin: 40px;
 }
 
 p {
@@ -62,4 +54,8 @@ button:focus {
 
 .sub-columns {
     background-color: transparent;
+}
+
+.card {
+    margin: 20px;
 }
