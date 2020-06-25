@@ -121,7 +121,7 @@ $(".search-button").click(function(e) {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'AIzaSyBqQ0do1ChNREvjhGUqrhv0HcsA0wa8YW8',
+            key: 'AIzaSyBvgwt3NdWSXMMRifxXgWUNe4McILF_eco',
             q: "beegees",
             part: 'snippet',
             maxResults: 1,
