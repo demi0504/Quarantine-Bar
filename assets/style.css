@@ -54,8 +54,11 @@ button:focus {
 
 .sub-columns {
     background-color: transparent;
+    margin: 3px;
 }
 
 .card {
     margin: 20px;
 }
+
+

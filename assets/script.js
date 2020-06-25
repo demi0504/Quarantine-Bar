@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
-
+//function for drinking games pulling giphy
 $("#games").click(function(e){
     event.preventDefault();
     console.log("clicked");
