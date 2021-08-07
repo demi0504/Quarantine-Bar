@@ -1,5 +1,5 @@
 # Quarantine Bar
-https://billyjhicksjr.github.io/qaurantinebar/
+https://billyjhicksjr.github.io/quarantinebar/
 
 ### Description
 For this project we've created a virtual bar that allows the user to either randomly select a cocktail recipe from Cocktail DB or to search for a specific cocktail recipe. While your enjoying your beverages, jam out to the provided playlist or play the drinking game we've provided on the page! 
